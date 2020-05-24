@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-26 16:04:26
+/* Smarty version 3.1.34-dev-7, created on 2020-04-29 10:31:04
   from 'C:\xampp\htdocs\Kalkulator\templates\main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ea594eaa1a288_72997986',
+  'unifunc' => 'content_5ea93b48e800d0_85265143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fdbf668c1086f5be14a236eb535d7df0b44ad6cc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Kalkulator\\templates\\main.html',
-      1 => 1587909864,
+      1 => 1588149061,
       2 => 'file',
     ),
   ),
@@ -20,38 +20,41 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ea594eaa1a288_72997986 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ea93b48e800d0_85265143 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /css/default.css">	
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+/fonts/fonts.css" rel="stylesheet" type="text/css" media="all" >
+    
 </head>
 <body>
     
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-        	<div id="banner" class="container"><img src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+                    <div id="banner" class="container"><img src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /images/CalcIcon.png" width="64" height="64" alt="" /></div>
 			<h1><a href="#">Loan Calculator</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
-/app/loans_view.html" title="">Homepage</a></li>
+                                <li><form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+calcHome" method="post" class="pure-form pure-form-stacked">
+                                        <a>Homepage</a>
+                                        <input type="submit" value="Calculate" class="pure-button pure-button-primary" />
+                                </form></li>
 				<li class="active">><a href="#" title="">Calculator</a></li>
 			</ul>
 		</div>
@@ -60,7 +63,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
     
 <div class="wrapper">
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20374906215ea594eaa19876_59082579', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21273200175ea93b48e7f924_59573648', 'content');
 ?>
 
 </div><!-- content -->
@@ -71,12 +74,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20374906215ea594ea
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_20374906215ea594eaa19876_59082579 extends Smarty_Internal_Block
+class Block_21273200175ea93b48e7f924_59573648 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_20374906215ea594eaa19876_59082579',
+    0 => 'Block_21273200175ea93b48e7f924_59573648',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

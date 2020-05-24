@@ -757,15 +757,5 @@
 /* Errors                                                               	 */
 /*********************************************************************************/
 	
-.messages {	margin: 1em auto; }
 
-.err, .inf, .res {
-	padding: 1em 1em 1em 3em;
-	border-radius: 1em;
-	color: #222;
-}
-
-.err { background-color: #f88; }
-.inf { background-color: #8f8; }
-.res { background-color: #ff0; }
 	
