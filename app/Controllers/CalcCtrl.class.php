@@ -1,9 +1,7 @@
 <?php
 
-require_once $conf->root_path.'/libs/Smarty.class.php';
-require_once $conf->root_path.'/libs/Messages.class.php';
-require_once $conf->root_path.'/app/Calc/CalcForm.class.php';
-require_once $conf->root_path.'/app/Calc/CalcResult.class.php';
+require_once 'CalcForm.class.php';
+require_once 'CalcResult.class.php';
 
 class CalcCtrl {
     
@@ -28,26 +26,26 @@ class CalcCtrl {
             if ( ! (isset($this->form->val) && isset($this->form->ye) && isset($this->form->in) ))	return false;
 
             if ($this->form->val == "") {
-			$this->msgs->addError('Value 1 not provided');
+			getMessages()->addError('Value 1 not provided');
 		}
 		if ($this->form->ye == "") {
-			$this->msgs->addError('Value 2 not provided');
+			getMessages()->addError('Value 2 not provided');
 		}
 		
 		// nie ma sensu walidować dalej gdy brak parametrów
-		if (! $this->msgs->isError()) {
+		if (!getMessages()->isError()) {
 			
 			// sprawdzenie, czy $x i $y są liczbami całkowitymi
 			if (! is_numeric ( $this->form->val )) {
-				$this->msgs->addError('Value 1 is not an integer');
+				getMessages()->addError('Value 1 is not an integer');
 			}
 			
 			if (! is_numeric ( $this->form->ye )) {
-				$this->msgs->addError('Value 2 is not an integer');
+				getMessages()->addError('Value 2 is not an integer');
 			}
 		}
 		
-		return ! $this->msgs->isError();
+		return ! getMessages()->isError();
     }
 
     public function process(){
@@ -69,15 +67,10 @@ class CalcCtrl {
         $this->genView();
     }
     public function genView(){
-        global $conf;
         
-        $smarty = new Smarty();
-	$smarty->assign('conf',$conf);
-					
-	$smarty->assign('msgs',$this->msgs);
-	$smarty->assign('form',$this->form);
-	$smarty->assign('res',$this->result);
+        getSmarty()->assign('form',$this->form);
+	getSmarty()->assign('res',$this->result);
 		
-	$smarty->display($conf->root_path.'/app/Calc/CalcView.html');
+	getSmarty()->display('CalcView.html');
     }
 }

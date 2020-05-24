@@ -32,8 +32,8 @@
 </div>
     
 <div class="wrapper">
-{block name=content} Domyślna treść zawartości .... {/block}
-</div><!-- content -->
+{block name=content} {/block}
+</div>
 
 	<div id="copyright">
 	<p>&copy; Bartosz Zysk. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
