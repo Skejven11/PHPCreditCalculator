@@ -21,11 +21,8 @@
 		</div>
 		<div id="menu">
 			<ul>
-                                <li><form action="{$conf->action_root}calcHome" method="post" class="pure-form pure-form-stacked">
-                                        <a>Homepage</a>
-                                        <input type="submit" value="Calculate" class="pure-button pure-button-primary" />
-                                </form></li>
-				<li class="active">><a href="#" title="">Calculator</a></li>
+                                <li><a href="{$conf->action_url}calcHome" class="pure-menu-heading pure-menu-link">Homepage</a></li>
+				<li><a href="{$conf->action_url}calcProcess" class="pure-menu-heading pure-menu-link">Calculator</a></li>
 			</ul>
 		</div>
 	</div>

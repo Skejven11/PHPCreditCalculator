@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-29 10:51:58
-  from 'C:\xampp\htdocs\Kalkulator\app\Calc\CalcView.html' */
+/* Smarty version 3.1.34-dev-7, created on 2020-05-24 10:29:39
+  from 'C:\xampp\htdocs\Kalkulator\app\views\CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ea9402e1c1462_60189102',
+  'unifunc' => 'content_5eca307375ef22_06969258',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '9a6205b4b1003a14bf8eca9136e7b4b400596b70' => 
+    '8ff7635da9f98cbc21938e6950c6788a8d0dfce1' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Kalkulator\\app\\Calc\\CalcView.html',
-      1 => 1588150316,
+      0 => 'C:\\xampp\\htdocs\\Kalkulator\\app\\views\\CalcView.tpl',
+      1 => 1590308977,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ea9402e1c1462_60189102 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eca307375ef22_06969258 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
-<!doctype html>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17189545395ea9402e1b5167_08488075', 'content');
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, ($_smarty_tpl->tpl_vars['conf']->value->root_path).("/templates/main.html"));
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18939244245eca3073751818_49499361', 'content');
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_17189545395ea9402e1b5167_08488075 extends Smarty_Internal_Block
+class Block_18939244245eca3073751818_49499361 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_17189545395ea9402e1b5167_08488075',
+    0 => 'Block_18939244245eca3073751818_49499361',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -71,7 +70,7 @@ calcProcess" method="post" class="pure-form pure-form-stacked">
 </form>	
 <div class="messages">
 <?php if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>
-	<h4>Wystąpiły błędy: </h4>
+	<h4>Errors occured: </h4>
 	<ol id="err">
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getErrors(), 'err');
@@ -88,7 +87,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <?php }?>
 
 <?php if ($_smarty_tpl->tpl_vars['msgs']->value->isInfo()) {?>
-	<h4>Informacje: </h4>
+	<h4>Info: </h4>
 	<ol class="inf">
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getInfos(), 'inf');
@@ -105,7 +104,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <?php }?>
 
 <?php if (isset($_smarty_tpl->tpl_vars['res']->value->result)) {?>
-	<h4>Wynik</h4>
+	<h4>Result</h4>
 	<p class="res">
 	<?php echo $_smarty_tpl->tpl_vars['res']->value->result;?>
 

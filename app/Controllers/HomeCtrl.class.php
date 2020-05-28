@@ -1,9 +1,11 @@
 <?php
-require_once $conf->root_path.'/libs/Smarty.class.php';
+
+namespace app\controllers;
+
 
 class HomeCtrl {
     
     public function GenView(){	
-	getSmarty()->display('HomeView.html');
+	getSmarty()->display('HomeView.tpl');
     }
 }

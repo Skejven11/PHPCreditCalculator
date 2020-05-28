@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-29 10:31:04
-  from 'C:\xampp\htdocs\Kalkulator\templates\main.html' */
+/* Smarty version 3.1.34-dev-7, created on 2020-05-28 22:30:09
+  from 'C:\xampp\htdocs\DZIAŁA\Kalkulator\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ea93b48e800d0_85265143',
+  'unifunc' => 'content_5ed01f51bf9b50_55800449',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'fdbf668c1086f5be14a236eb535d7df0b44ad6cc' => 
+    '2c10a1915d1c771d581f88bd431e96916d586432' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Kalkulator\\templates\\main.html',
-      1 => 1588149061,
+      0 => 'C:\\xampp\\htdocs\\DZIAŁA\\Kalkulator\\app\\views\\templates\\main.tpl',
+      1 => 1590310528,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ea93b48e800d0_85265143 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ed01f51bf9b50_55800449 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -50,12 +50,10 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 		</div>
 		<div id="menu">
 			<ul>
-                                <li><form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-calcHome" method="post" class="pure-form pure-form-stacked">
-                                        <a>Homepage</a>
-                                        <input type="submit" value="Calculate" class="pure-button pure-button-primary" />
-                                </form></li>
-				<li class="active">><a href="#" title="">Calculator</a></li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+calcHome" class="pure-menu-heading pure-menu-link">Homepage</a></li>
+				<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+calcProcess" class="pure-menu-heading pure-menu-link">Calculator</a></li>
 			</ul>
 		</div>
 	</div>
@@ -63,10 +61,10 @@ calcHome" method="post" class="pure-form pure-form-stacked">
     
 <div class="wrapper">
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21273200175ea93b48e7f924_59573648', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3991719145ed01f51bf92e3_19939365', 'content');
 ?>
 
-</div><!-- content -->
+</div>
 
 	<div id="copyright">
 	<p>&copy; Bartosz Zysk. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
@@ -74,17 +72,17 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21273200175ea93b48
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_21273200175ea93b48e7f924_59573648 extends Smarty_Internal_Block
+class Block_3991719145ed01f51bf92e3_19939365 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_21273200175ea93b48e7f924_59573648',
+    0 => 'Block_3991719145ed01f51bf92e3_19939365',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
- Domyślna treść zawartości .... <?php
+ <?php
 }
 }
 /* {/block 'content'} */

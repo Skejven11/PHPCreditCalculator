@@ -1,24 +1,25 @@
 <?php
 
-require_once 'CalcForm.class.php';
-require_once 'CalcResult.class.php';
+namespace app\controllers;
+
+use app\forms\CalcForm;
+use app\transfer\CalcResult;
 
 class CalcCtrl {
-    
-    private $msgs;   
+     
     private $form;   
     private $result;
     
     public function __construct(){
-        $this->msgs = new Messages();
+        
 	$this->form = new CalcForm();
 	$this->result = new CalcResult();
     }
     
     public function getParams(){
-            $this->form->val = isset($_REQUEST['val']) ? $_REQUEST['val'] : null;
-            $this->form->ye = isset($_REQUEST['ye']) ? $_REQUEST['ye'] : null;
-            $this->form->in = isset($_REQUEST['in']) ? $_REQUEST['in'] : null;	
+            $this->form->val = getFromRequest('val');
+            $this->form->ye = getFromRequest('ye');
+            $this->form->in = getFromRequest('in');	
     }
 
     public function validate(){	
@@ -57,12 +58,12 @@ class CalcCtrl {
 
                 $this->form->val = floatval($this->form->val);
                 $this->form->ye = floatval($this->form->ye);
-                $this->msgs->addInfo('Parametry poprawne.');
+                getMessages()->addInfo('Correct parameters');
 
                 $ye_temp = $this->form->ye*12;
                 $this->result->result = $this->form->val/$ye_temp+$this->form->val*$this->form->in/$ye_temp;
                 
-                $this->msgs->addInfo('Wykonano obliczenia.');
+                getMessages()->addInfo('Computing complete');
             }
         $this->genView();
     }
@@ -71,6 +72,6 @@ class CalcCtrl {
         getSmarty()->assign('form',$this->form);
 	getSmarty()->assign('res',$this->result);
 		
-	getSmarty()->display('CalcView.html');
+	getSmarty()->display('CalcView.tpl');
     }
 }
