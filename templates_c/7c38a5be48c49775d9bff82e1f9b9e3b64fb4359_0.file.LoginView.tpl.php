@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-05 01:12:37
-  from 'C:\xampp\htdocs\Kalkulator\app\views\CalcView.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-06-05 01:12:40
+  from 'C:\xampp\htdocs\Kalkulator\app\views\LoginView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ed97fe5f1ce83_81452786',
+  'unifunc' => 'content_5ed97fe8616f87_43025071',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8ff7635da9f98cbc21938e6950c6788a8d0dfce1' => 
+    '7c38a5be48c49775d9bff82e1f9b9e3b64fb4359' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Kalkulator\\app\\views\\CalcView.tpl',
-      1 => 1591312349,
+      0 => 'C:\\xampp\\htdocs\\Kalkulator\\app\\views\\LoginView.tpl',
+      1 => 1591311976,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ed97fe5f1ce83_81452786 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ed97fe8616f87_43025071 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18505278595ed97fe5f0cbf3_60466999', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9173279315ed97fe86091b6_99488879', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_18505278595ed97fe5f0cbf3_60466999 extends Smarty_Internal_Block
+class Block_9173279315ed97fe86091b6_99488879 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_18505278595ed97fe5f0cbf3_60466999',
+    0 => 'Block_9173279315ed97fe86091b6_99488879',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -43,30 +43,16 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 
 <div style="margin: 40px 45%">
-<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-calcProcess" method="post" class="pure-form pure-form-stacked">
+<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+login" method="post"  class="pure-form pure-form-aligned bottom-margin">
+	<legend>Please Login</legend>
 	<fieldset>
-		<label for="id_val">Value: </label>
-                <input id="id_val" type="text" placeholder="Value" name="val" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->val;?>
-" />
-		<label for="id_in">Interest: </label>
-		<select name="in">
-			<option value="0.01">1%</option>
-			<option value="0.02">2%</option>
-			<option value="0.03">3%</option>
-			<option value="0.04">4%</option>
-			<option value="0.05">5%</option>
-			<option value="0.06">6%</option>
-			<option value="0.07">7%</option>
-			<option value="0.08">8%</option>
-			<option value="0.09">9%</option>
-			<option value="0.1">10%</option>
-		</select>
-		<label for="id_ye">Years: </label>
-                <input id="id_ye" type="text" placeholder="years" name="ye" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->ye;?>
-" />
-	</fieldset>	
-	<input type="submit" value="Calculate" class="pure-button pure-button-primary" />
+			<label for="id_login">login: </label>
+			<input id="id_login" type="text" name="login"/>
+			<label for="id_pass">password: </label>
+			<input id="id_pass" type="password" name="pass" /><br />
+	</fieldset>
+        <input type="submit" value="login" class="pure-button pure-button-primary"/>
 </form>	
 <div class="messages">
 <?php if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>

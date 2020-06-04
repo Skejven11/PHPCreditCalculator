@@ -23,6 +23,7 @@
 			<ul>
                                 <li><a href="{$conf->action_url}calcHome" class="pure-menu-heading pure-menu-link">Homepage</a></li>
 				<li><a href="{$conf->action_url}calcProcess" class="pure-menu-heading pure-menu-link">Calculator</a></li>
+                                <li><a href="{$conf->action_url}logout"  class="pure-menu-heading pure-menu-link">wyloguj</a></li>
 			</ul>
 		</div>
 	</div>

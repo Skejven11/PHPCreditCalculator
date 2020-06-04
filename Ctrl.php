@@ -2,20 +2,18 @@
 
 require_once 'init.php';
 
-$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+getConf()->login_action = 'login';
 
 switch ($action) {
     default:
-        $ctrl = new app\controllers\CalcCtrl();
-        $ctrl->genView();
-        break;
+        control('app\\controllers','HomeCtrl', 'GenView',['user','admin']);
+     case 'login':
+        control('app\\controllers', 'LoginCtrl', 'doLogin');
+     case 'logout':
+        control('app\\controllers','LoginCtrl', 'doLogout',['user','admin']);
      case 'calcProcess':
-        $ctrl = new app\controllers\CalcCtrl();
-        $ctrl->process();
-        break;
+        control('app\\controllers','CalcCtrl', 'Process',['user','admin']);
      case 'calcHome':
-        $Hctrl = new app\controllers\HomeCtrl();
-        $Hctrl->GenView();
-        break;
+        control('app\\controllers','HomeCtrl', 'GenView',['user','admin']);
 }
 
